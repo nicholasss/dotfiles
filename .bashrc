@@ -5,9 +5,16 @@
 # aliases
 alias dfs="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 alias vim="/usr/bin/nvim"
+alias more=less
 
 # autocomplete case-insensitive
 bind -s 'set completion-ignore-case on'
+
+
+if [[ $(lsb_release -is) == "ManjaroLinux" ]]; then 
+	echo "No Manjaro specific bash for now."
+fi
+
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
@@ -102,7 +109,6 @@ unset use_color safe_term match_lhs sh
 #alias df='df -h'                          # human-readable sizes
 #alias free='free -m'                      # show sizes in MB
 #alias np='nano -w PKGBUILD'
-alias more=less
 
 xhost +local:root > /dev/null 2>&1
 
