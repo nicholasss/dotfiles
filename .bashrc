@@ -11,9 +11,9 @@ alias more=less
 bind -s 'set completion-ignore-case on'
 
 
-if [[ $(lsb_release -is) == "ManjaroLinux" ]]; then 
-	echo "No Manjaro specific bash for now."
-fi
+# if [[ $(lsb_release -is) == "ManjaroLinux" ]]; then 
+# 	echo "No Manjaro specific bash for now."
+# fi
 
 
 # If not running interactively, don't do anything
