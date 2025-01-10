@@ -10,6 +10,19 @@ alias more=less
 # autocomplete case-insensitive
 bind -s 'set completion-ignore-case on'
 
+# used to switch vim configs
+vimswitch() {
+	echo "Switching neovim configs."
+	if [[ -d ~/.config/$1 ]] ; then
+		export NVIM_APPNAME="$1"
+		echo "NVIM_APPNAME: $1"
+	else
+		echo "~/.config/$1 not found."
+	fi
+
+}
+alias vms='vimswitch'
+alias nvms='vimswitch'
 
 # if [[ $(lsb_release -is) == "ManjaroLinux" ]]; then 
 # 	echo "No Manjaro specific bash for now."
@@ -124,7 +137,6 @@ shopt -s expand_aliases
 
 # Enable history appending instead of overwriting.  #139609
 shopt -s histappend
-
 
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
