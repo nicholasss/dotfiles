@@ -1,12 +1,13 @@
 # nicholasss alacritty config
 
+# Theming
 [general]
 import = ["~/.config/alacritty/themes/tokyo-night.toml"]
 
+# Default window size
 [window]
 dimensions = { columns = 90, lines = 30 }
 dynamic_title = true
-# resize_increments = true
 
 [font]
 normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
